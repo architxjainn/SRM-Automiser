@@ -36,7 +36,7 @@ MARKS_FILE = os.path.expanduser("~/Documents/SRM_Notes_Drive/user_marks.json")
 os.makedirs(DRIVE_FOLDER, exist_ok=True)
 
 # --- PERMANENT GEMINI API KEY CONFIGURATION ---
-PERMANENT_GEMINI_KEY = "Your api key"  # <-- Paste your Gemini API key here inside quotes!
+PERMANENT_GEMINI_KEY = "GCP_API_KEY"  # <-- Paste your Gemini API key here inside quotes!
 
 SUBJECT_CODES = ["26CSE1002J", "26MAB1001T", "26CYB1002J", "26BTB1001T", "26LCA1007J"]
 
