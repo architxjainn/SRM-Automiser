@@ -1,0 +1,197 @@
+{
+    "26CSE1002J": {
+        "Unit 1: Basic Logic, Control Flow & User I/O": {
+            "Relational operators, boolean logic & conditional checks": true,
+            "Standard I/O: Reading & displaying data in C": true,
+            "Menu-driven programs using switch statements": true,
+            "Comparing switch vs if...else-if...else statements": true
+        },
+        "Unit 2: Functions, Call Mechanics & Recursion": {
+            "Modular programming, pass-by-value & pass-by-reference": false,
+            "Recursive thinking for subproblems (Factorial, Fibonacci, GCD)": false,
+            "Call stack expansion/contraction tracing": false,
+            "Recursive algorithms for reverse number, palindrome & Euclid's GCD": false
+        },
+        "Unit 3: Loops, Array Processing & Strings": {
+            "Structured iterative solutions (while, do-while, for loops)": false,
+            "Loop-based reasoning for numeric sequences & pattern printing": false,
+            "Linear search in arrays for successful/unsuccessful cases": false,
+            "Array reversal, element frequency counter & string concatenation": false
+        },
+        "Unit 4: Recursive Algorithms, Control Transfer & Performance": {
+            "Binary search implementation using recursion vs iteration": false,
+            "Recursion vs iteration analysis (Factorial, Palindrome, power a^n)": false,
+            "Loop control mechanics using break and continue statements": false,
+            "Memory & performance tradeoffs between recursion and iteration": false
+        },
+        "Unit 5: Dynamic Memory Allocation & File I/O": {
+            "Dynamic memory allocation using malloc, calloc, realloc, and free": false,
+            "Dynamic list implementation and runtime array resizing": false,
+            "Standard file handling in C (fopen, fscanf, fgets, feof, fclose)": false,
+            "File processing: Character, word, line counting & frequency report": false
+        }
+    },
+    "26MAB1001T": {
+        "Unit-1: Vector Space and Matrices": {
+            "Review of matrices": true,
+            "Vector space and subspace": true,
+            "Linear dependence and independence": true,
+            "Characteristic equation": true,
+            "Eigenvalues and eigenvectors of a real matrix": true,
+            "Cayley-Hamilton theorem": true,
+            "Linear transformation on Rn": true,
+            "Orthogonal transformation": true,
+            "Diagonalization of a matrix": true
+        },
+        "Unit-2: Ordinary Differential Equations": {
+            "Review of continuity and differentiability": false,
+            "First-order differential equation": false,
+            "Linear second-order differential equations with constant coefficients": false,
+            "Method of variation of parameters": false,
+            "Cauchy-Euler equation": false,
+            "Legendre's equation": false
+        },
+        "Unit-3: Differential Calculus and Applications": {
+            "Review of curve tracing": false,
+            "Curvature, radius of curvature - cartesian forms": false,
+            "Radius of curvature polar and parametric forms": false,
+            "Circle of curvature": false,
+            "Evolutes and involutes": false,
+            "Envelope": false,
+            "Pedal equations": false
+        },
+        "Unit-4: Functions of Several Variables": {
+            "Review of limit, continuity and differentiability": false,
+            "Introduction to partial derivatives": false,
+            "Partial derivatives and geometrical interpretation": false,
+            "Total derivative and implicit function": false,
+            "Euler's theorem on homogeneous functions": false,
+            "Chain rule and Jacobians": false,
+            "Taylor's series for two variables": false,
+            "Extrema of functions of two variables": false,
+            "Lagrange's multiplier method": false
+        },
+        "Unit-5: Sequence and Series": {
+            "Review of sequence and series": false,
+            "Series of positive terms": false,
+            "Test of convergence - Cauchy integral test": false,
+            "Comparison test": false,
+            "D'Alembert ratio test and Raabe's test": false,
+            "Logarithmic test and Cauchy root test": false,
+            "Alternating series - Leibnitz test": false,
+            "Absolute convergence": false,
+            "Conditional convergence": false
+        }
+    },
+    "26CYB1002J": {
+        "Unit 1: Quantum Mechanics & Molecular Orbitals": {
+            "Wave Theory & Uncertainty Principle": false,
+            "Postulates of Quantum Mechanics & Schrodinger Eq": false,
+            "Particle in a Box Solution (Energy & Wave Eq)": false,
+            "Radial & Angular Wave Functions of H-Atom": false,
+            "Significance of Wave Function": false,
+            "Molecular Orbital Theory & LCAO Method": false,
+            "Structure and Orbital Picture of Butadiene": false,
+            "Structure and Orbital Picture of Benzene": false
+        },
+        "Unit 2: Periodic Properties & Cheminformatics": {
+            "Effective Nuclear Charge & Slater's Rule": false,
+            "Ionization Energy, Affinity & Electronegativity": false,
+            "Polarizability & Fajans' Rule": false,
+            "Cheminformatics Introduction & Importance": false,
+            "Molecular Geometry & Stereochemistry": false,
+            "Molecular Representations (2D, 3D, SMILES, InChI)": false,
+            "Software Tools (RDKit, Molecular Drawing)": false,
+            "Major Chemical Databases (PubChem, ChEMBL)": false
+        },
+        "Unit 3: Thermodynamics & Electrochemistry": {
+            "Internal Energy and Enthalpy": false,
+            "Free Energies (Helmholtz & Gibbs) & Entropy": false,
+            "Laws of Thermodynamics & Basic Terms": false,
+            "Gibbs Free Energy & Cell Potential Relationship": false,
+            "Nernst Equation Derivation & Applications": false,
+            "Galvanic Cells & Electrode Potentials": false
+        },
+        "Unit 4: Materials & Nanomaterials": {
+            "Magnetic and Superconducting Materials": false,
+            "Band Structure of Solids & Doping": false,
+            "Semiconductor Materials & Applications": false,
+            "Nanomaterials Introduction & Properties": false,
+            "Types of Nanomaterials (0D, 1D, 2D, 3D)": false,
+            "Quantum Dots & Applications": false
+        },
+        "Unit 5: Spectroscopy": {
+            "Electromagnetic Radiation Properties & Regions": false,
+            "Vibrational & Electronic Spectroscopy Principles": false,
+            "Born-Oppenheimer Approximation": false,
+            "UV-Visible Spectroscopy Principle & Applications": false,
+            "IR Spectroscopy Principle & Applications": false,
+            "Bandgap Calculation using UV-Vis": false,
+            "NMR Spectroscopy Theory & Chemical Shift": false
+        }
+    },
+    "26BTB1001T": {
+        "Unit 1: Cell Basics & Computing Analogies": {
+            "Cell theory and prokaryotic/eukaryotic differences": false,
+            "Organelles as CPU components analogy": false,
+            "DNA replication compared to code duplication": false,
+            "Cell division as parallel computing": false,
+            "Genetic algorithms for biological optimization": false,
+            "Evolutionary computing in cell/tissue modelling": false
+        },
+        "Unit 2: Biomolecules as Data Structures": {
+            "Carbohydrates/lipids as energy/membrane storage": false,
+            "Proteins/nucleic acids as functional data structures": false,
+            "Enzymes as biological catalysts": false,
+            "Nucleic acid structure-function relationships": false,
+            "BLAST tool for sequence database queries": false,
+            "Human Genome Project as big data genomics": false
+        },
+        "Unit 3: Protein Structures & Prediction": {
+            "Protein synthesis and primary structure": false,
+            "Secondary/tertiary/quaternary organisation": false,
+            "PyMOL for 3D protein visualisation": false,
+            "Secondary structure prediction methods": false,
+            "Python programming for structure analysis": false,
+            "Basics for drug design": false
+        },
+        "Unit 4: AI/ML Foundations in Biology": {
+            "Overview of AI for biological big data": false,
+            "Supervised and unsupervised learning basics": false,
+            "Feature representations for sequences and omics": false,
+            "AI data pipeline: preprocess, train, evaluate": false,
+            "Applications in genomics and systems biology": false,
+            "Benefits and limitations of AI in biology": false
+        },
+        "Unit 5: Deep Learning, Healthcare & Ethics": {
+            "Deep learning for images, signals and sequences": false,
+            "AI in drug discovery and biotechnology": false,
+            "AI-assisted medical diagnostics and imaging": false,
+            "AI for integrated bioinformatics and health data": false,
+            "Real-time AI for monitoring and decision support": false,
+            "Ethical and social issues of AI in biology": false
+        }
+    },
+    "26LCA1007J": {
+        "Unit 1: Spanish Vocabulary & Grammar": {
+            "Basic Greetings and Noun Genders": false,
+            "Definite & Indefinite Articles": false
+        },
+        "Unit 2: Conjugations & Present Tense": {
+            "Regular -AR, -ER, -IR Verbs": false,
+            "Ser vs Estar Usage": false
+        },
+        "Unit 3: Conversational Spanish": {
+            "Numbers, Days & Months": false,
+            "Asking Directions & Ordering Food": false
+        },
+        "Unit 4: Advanced Spanish Expressions": {
+            "Possessive Adjectives & Prepositions": false,
+            "Reflexive Verbs & Daily Routine": false
+        },
+        "Unit 5: Culture & Reading Comprehension": {
+            "Short Passage Reading": false,
+            "Cultural Insights of Spanish Speaking World": false
+        }
+    }
+}
