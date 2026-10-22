@@ -471,6 +471,7 @@ MASTER_SCHEDULES = {
 }
 
 # --- PERSISTENT PLAYWRIGHT SESSION LOGIN (CAPTCHA BYPASS) ---
+os.system("playwright install chromium")
 async def fetch_attendance_with_credentials(username, password, status_placeholder):
     user_email = username if "@" in username else f"{username}@srmist.edu.in"
     login_id = username.split("@")[0]
