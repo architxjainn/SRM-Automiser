@@ -1,2 +1,2 @@
-playwright install-deps chromium
+export PLAYWRIGHT_BROWSERS_PATH=/tmp/ms-playwright
 playwright install chromium
