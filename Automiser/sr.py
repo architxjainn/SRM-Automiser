@@ -471,24 +471,20 @@ MASTER_SCHEDULES = {
 }
 
 # --- PERSISTENT PLAYWRIGHT SESSION LOGIN (CAPTCHA BYPASS) ---
-import os
-os.environ["PLAYWRIGHT_BROWSERS_PATH"] = os.path.expanduser("~/.cache/ms-playwright")
-os.system("playwright install chromium")
 async def fetch_attendance_with_credentials(username, password, status_placeholder):
     user_email = username if "@" in username else f"{username}@srmist.edu.in"
     login_id = username.split("@")[0]
 
     import os
-os.environ["PLAYWRIGHT_BROWSERS_PATH"] = "/tmp/ms-playwright"
-    if not os.path.exists(os.path.expanduser("~/.cache/ms-playwright")):
+    os.environ["PLAYWRIGHT_BROWSERS_PATH"] = "/tmp/ms-playwright"
+    if not os.path.exists("/tmp/ms-playwright"):
         os.system("playwright install chromium")
-        
+
     async with async_playwright() as p:
         browser = await p.chromium.launch(
-    headless=True,
-    executable_path="/usr/bin/chromium",
-    args=["--disable-blink-features=AutomationControlled", "--no-sandbox", "--disable-dev-shm-usage"]
-)
+            headless=True,
+            args=["--disable-blink-features=AutomationControlled", "--no-sandbox", "--disable-dev-shm-usage"]
+        )
         # Load Session Cookies if existing
         if os.path.exists(SESSION_COOKIE_FILE):
             try:
