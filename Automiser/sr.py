@@ -474,38 +474,10 @@ MASTER_SCHEDULES = {
 async def fetch_attendance_with_credentials(username, password, status_placeholder):
     user_email = username if "@" in username else f"{username}@srmist.edu.in"
     login_id = username.split("@")[0]
-
-    import os
-import subprocess
-
-# Set path before anything else
-async def fetch_attendance_with_credentials(username, password, status_placeholder):
-    user_email = username if "@" in username else f"{username}@srmist.edu.in"
-    login_id = username.split("@")[0]
-
-    import os
-    import subprocess
-
-    os.environ["PLAYWRIGHT_BROWSERS_PATH"] = "/tmp/ms-playwright"
     
-    if not os.path.exists("/tmp/ms-playwright/chromium"):
-        status_placeholder.text("Installing browser dependencies...")
-        subprocess.run(["playwright", "install", "chromium"], check=True)
-
-    status_placeholder.text("Starting browser session...")
     async with async_playwright() as p:
-        browser = await p.chromium.launch(
-            headless=True,
-            args=[
-                "--no-sandbox",
-                "--disable-setuid-sandbox",
-                "--disable-dev-shm-usage",
-                "--disable-gpu",
-                "--disable-blink-features=AutomationControlled"
-            ]
-        )
+        browser = await p.chromium.launch(headless=False, args=["--disable-blink-features=AutomationControlled"])
         
-        # ... continue with page / context code ...
         # Load Session Cookies if existing
         if os.path.exists(SESSION_COOKIE_FILE):
             try:
@@ -514,7 +486,7 @@ async def fetch_attendance_with_credentials(username, password, status_placehold
                 context = await browser.new_context(viewport={"width": 1400, "height": 900})
         else:
             context = await browser.new_context(viewport={"width": 1400, "height": 900})
-            
+
         page = await context.new_page()
 
         try:
