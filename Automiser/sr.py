@@ -476,15 +476,36 @@ async def fetch_attendance_with_credentials(username, password, status_placehold
     login_id = username.split("@")[0]
 
     import os
-    os.environ["PLAYWRIGHT_BROWSERS_PATH"] = "/tmp/ms-playwright"
-    if not os.path.exists("/tmp/ms-playwright"):
-        os.system("playwright install chromium")
+import subprocess
 
+# Set path before anything else
+async def fetch_attendance_with_credentials(username, password, status_placeholder):
+    user_email = username if "@" in username else f"{username}@srmist.edu.in"
+    login_id = username.split("@")[0]
+
+    import os
+    import subprocess
+
+    os.environ["PLAYWRIGHT_BROWSERS_PATH"] = "/tmp/ms-playwright"
+    
+    if not os.path.exists("/tmp/ms-playwright/chromium"):
+        status_placeholder.text("Installing browser dependencies...")
+        subprocess.run(["playwright", "install", "chromium"], check=True)
+
+    status_placeholder.text("Starting browser session...")
     async with async_playwright() as p:
         browser = await p.chromium.launch(
             headless=True,
-            args=["--disable-blink-features=AutomationControlled", "--no-sandbox", "--disable-dev-shm-usage"]
+            args=[
+                "--no-sandbox",
+                "--disable-setuid-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-gpu",
+                "--disable-blink-features=AutomationControlled"
+            ]
         )
+        
+        # ... continue with page / context code ...
         # Load Session Cookies if existing
         if os.path.exists(SESSION_COOKIE_FILE):
             try:
