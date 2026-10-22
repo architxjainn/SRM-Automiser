@@ -487,9 +487,13 @@ os.environ["PLAYWRIGHT_BROWSERS_PATH"] = os.path.expanduser("~/.cache/ms-playwri
 if not os.path.exists(os.path.expanduser("~/.cache/ms-playwright")):
     os.system("playwright install chromium")
     async def main():
+    async def fetch_attendance_with_credentials(...):  # line 489
+    # Every line inside the function MUST be indented like this:
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
-        # Your other playwright code here...
+        async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=False, args=["--disable-blink-features=AutomationControlled"])
+        
 
 # Call it like this:
 import asyncio
