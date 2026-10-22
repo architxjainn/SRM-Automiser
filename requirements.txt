@@ -1,3 +1,8 @@
 streamlit
+pandas
 beautifulsoup4
-requests
+playwright
+google-generativeai
+pypdf
+pytesseract
+pillow
