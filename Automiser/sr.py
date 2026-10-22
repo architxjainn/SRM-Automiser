@@ -476,7 +476,7 @@ async def fetch_attendance_with_credentials(username, password, status_placehold
     login_id = username.split("@")[0]
     
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False, args=["--disable-blink-features=AutomationControlled"])
+        browser = await p.chromium.launch(headless=True, args=["--disable-blink-features=AutomationControlled"])
         
         # Load Session Cookies if existing
         if os.path.exists(SESSION_COOKIE_FILE):
