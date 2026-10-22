@@ -484,8 +484,11 @@ async def fetch_attendance_with_credentials(username, password, status_placehold
         os.system("playwright install chromium")
 
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True, args=["--disable-blink-features=AutomationControlled"])
-        
+        browser = await p.chromium.launch(
+    headless=True,
+    executable_path="/usr/bin/chromium",
+    args=["--disable-blink-features=AutomationControlled", "--no-sandbox", "--disable-dev-shm-usage"]
+)
         # Load Session Cookies if existing
         if os.path.exists(SESSION_COOKIE_FILE):
             try:
