@@ -486,9 +486,14 @@ os.environ["PLAYWRIGHT_BROWSERS_PATH"] = os.path.expanduser("~/.cache/ms-playwri
 # Auto-install chromium if it doesn't exist yet
 if not os.path.exists(os.path.expanduser("~/.cache/ms-playwright")):
     os.system("playwright install chromium")
+    async def main():
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True, args=["--disable-blink-features=AutomationControlled"])
-        
+        browser = await p.chromium.launch(headless=True)
+        # Your other playwright code here...
+
+# Call it like this:
+import asyncio
+asyncio.run(main())  
         # Load Session Cookies if existing
         if os.path.exists(SESSION_COOKIE_FILE):
             try:
